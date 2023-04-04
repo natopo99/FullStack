@@ -8,7 +8,8 @@ function MovieList(blah: any) {
     setListMovies([...MovieData]);
   };
   return (
-    <>
+    // This empty bracket below is specific to react
+    <> 
       <div>
         <h3>Joel Hilton's Movie Collection</h3>
       </div>
@@ -24,6 +25,7 @@ function MovieList(blah: any) {
               <th>Edited</th>
             </tr>
           </thead>
+          {/* Iterate through the imported json data */}
           <tbody>
             {MovieData.map((m) => (
               <tr>
@@ -38,9 +40,6 @@ function MovieList(blah: any) {
           </tbody>
         </table>
       </div>
-      <button className="btn btn-danger" onClick={addMovie}>
-        Add Movie
-      </button>
     </>
   );
 }

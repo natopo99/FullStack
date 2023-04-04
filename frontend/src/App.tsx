@@ -32,12 +32,24 @@ function HomePage() {
 function Nav() {
   return (
     <header>
-      <nav className="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-        <div className="container">
-          <a className="" href="home">
+      <nav className="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-dark border-bottom box-shadow mb-3 ">
+      
+      {/* Making al the links buttons and adding bootstrap to them */}
+
+        <div className="container"> 
+          <a href="home" className="btn btn-danger">
             Home
+          </a>
+          |
+          <a href="movies" className="btn btn-danger">
+            {' '}
+            Movies
           </a>{' '}
-          |<a href="movies"> Movies</a> |<a href="podcasts"> Podcasts</a>
+          |
+          <a href="podcasts" className="btn btn-danger">
+            {' '}
+            Podcasts
+          </a>
         </div>
       </nav>
     </header>
@@ -48,8 +60,7 @@ function App() {
 
   let content;
 
-  // Allow for changing of the Routes
-
+  // This navigates the person to different pages
   content = <HomePage />;
 
   if (path === '/movies') {
@@ -57,7 +68,7 @@ function App() {
   } else if (path === '/podcasts') {
     content = <Podcasts />;
   }
-  //Render out Selected Content with Common Navbar
+  //Show Content and the Navbar
   return (
     <div>
       <div className="App">
