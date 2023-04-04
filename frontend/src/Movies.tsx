@@ -21,6 +21,7 @@ function MovieList(blah: any) {
               <th>Director</th>
               <th>Rating</th>
               <th>Category</th>
+              <th>Edited</th>
             </tr>
           </thead>
           <tbody>
@@ -31,13 +32,15 @@ function MovieList(blah: any) {
                 <td>{m.Director}</td>
                 <td>{m.Rating}</td>
                 <td>{m.Category}</td>
-                <td>Need to Add Edited Field</td>
+                <td>{m.Edited}</td>
               </tr>
             ))}
           </tbody>
         </table>
       </div>
-      <button className='btn btn-danger' onClick={addMovie}>Add Movie</button>
+      <button className="btn btn-danger" onClick={addMovie}>
+        Add Movie
+      </button>
     </>
   );
 }
