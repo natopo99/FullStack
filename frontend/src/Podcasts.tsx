@@ -2,10 +2,10 @@ function Podcasts() {
   return (
     <>
       <div>
-        <h1>Here is a link to my podcast</h1>
+        <h1>My Podcast!!!</h1>
         <br></br>
         <p>
-          It has a cool name!!<a>https://baconsale.com/</a>
+          Here is the Link: <a href="https://baconsale.com/">BaconSale</a>
         </p>
       </div>
     </>
