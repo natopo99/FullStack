@@ -1,12 +1,12 @@
-import data from 'frontendsrcMovieData.json';
+import data from './MovieData.json';
 import React, { useState } from 'react';
 const MovieData = data.MovieData;
 
-function MovieList() {
-    const [listMovies, setListMovies] = useState(MovieData);
-    const addMovie = () => {
-
-    }
+function MovieList(blah: any) {
+  const [listMovies, setListMovies] = useState(MovieData);
+  const addMovie = () => {
+    setListMovies([...MovieData]);
+  };
   return (
     <>
       <div>
@@ -37,8 +37,9 @@ function MovieList() {
           </tbody>
         </table>
       </div>
+      <button className='btn btn-danger' onClick={addMovie}>Add Movie</button>
     </>
   );
 }
 
-export default MovieList();
+export default MovieList;
