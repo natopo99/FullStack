@@ -16,6 +16,7 @@ builder.Services.AddDbContext<MovieCollectionDbContext>(options =>
         builder.Configuration.GetConnectionString("DefaultConnection")
     )
 );
+builder.Services.AddCors();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -24,7 +25,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
-
+app.UseCors(p => p.WithOrigins("http://localhost:3000"));
 app.UseHttpsRedirection();
 
 app.UseAuthorization();

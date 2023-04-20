@@ -2,9 +2,10 @@ import React, { useState } from 'react';
 
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import MovieList from './Movies';
+
 import Podcasts from './Podcasts';
 import joel from './JoelHiltonHeadshot.jpg';
+import MovieList from './Movie/MovieList';
 
 function HomePage() {
   return (
@@ -33,10 +34,9 @@ function Nav() {
   return (
     <header>
       <nav className="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-dark border-bottom box-shadow mb-3 ">
-      
-      {/* Making al the links buttons and adding bootstrap to them */}
+        {/* Making al the links buttons and adding bootstrap to them */}
 
-        <div className="container"> 
+        <div className="container">
           <a href="home" className="btn btn-danger">
             Home
           </a>
